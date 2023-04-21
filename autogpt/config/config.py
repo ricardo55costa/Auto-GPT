@@ -37,7 +37,7 @@ class Config(metaclass=Singleton):
         )
 
         self.openai_api_key = os.getenv("OPENAI_API_KEY")
-        self.temperature = float(os.getenv("TEMPERATURE", "0"))
+        self.temperature = float(os.getenv("TEMPERATURE", "0.1"))
         self.use_azure = os.getenv("USE_AZURE") == "True"
         self.execute_local_commands = (
             os.getenv("EXECUTE_LOCAL_COMMANDS", "False") == "True"
